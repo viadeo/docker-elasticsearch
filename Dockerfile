@@ -1,7 +1,7 @@
 FROM dockerfile/java
 
-RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.deb -O /tmp/elasticsearch-1.1.1.deb
-RUN dpkg -i /tmp/elasticsearch-1.1.1.deb
+RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.6.deb -O /tmp/elasticsearch-0.20.6.deb
+RUN dpkg -i /tmp/elasticsearch-0.20.6.deb
 
 # Prevent elasticsearch calling `ulimit`
 RUN sed -i 's/MAX_OPEN_FILES=/# MAX_OPEN_FILES=/g' /etc/init.d/elasticsearch
@@ -15,4 +15,5 @@ RUN sed -i 's/# discovery.zen.ping.multicast.enabled:.*/discovery.zen.ping.multi
 EXPOSE 9200
 EXPOSE 9300
 
-CMD ["/usr/share/elasticsearch/bin/elasticsearch"]
+CMD ["/usr/share/elasticsearch/bin/elasticsearch", "-f"]
+
