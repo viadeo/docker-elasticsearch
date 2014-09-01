@@ -1,4 +1,4 @@
 docker-elasticsearch
 ====================
 
-Elasticsearch docker images for development
+Elasticsearch 0.20.6 docker images for development
