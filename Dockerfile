@@ -11,9 +11,10 @@ RUN \
   wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.6.tar.gz && \
   tar xvzf elasticsearch-0.20.6.tar.gz && \
   rm -f elasticsearch-0.20.6.tar.gz && \
-  mv /tmp/elasticsearch-0.20.6 /elasticsearch && \
-  /elasticsearch/bin/plugin -install mobz/elasticsearch-head && \
-  /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/1.7.0
+  mv /tmp/elasticsearch-0.20.6 /elasticsearch
+
+RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head && \
+    /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/1.7.0
 
 # Define mountable directories.
 VOLUME ["/data"]
