@@ -16,6 +16,11 @@ RUN \
 RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head && \
     /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.1.0
 
+# Locale
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8 
+
 # Define mountable directories.
 VOLUME ["/data"]
 
