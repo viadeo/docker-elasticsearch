@@ -3,4 +3,9 @@ path:
   logs: /data/log
   work: /data/work
 
+# bad practice, this is only set for test backward compatibility
+# do not reproduce in latest image
+index.number_of_replicas: 0
+index.number_of_shards: 1
+
 discovery.zen.ping.multicast.enabled: false
