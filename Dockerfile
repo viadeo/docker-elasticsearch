@@ -1,4 +1,4 @@
-FROM google/debian:wheezy
+FROM google/debian:wheezy:latest
 
 # Java
 RUN apt-get update && \
