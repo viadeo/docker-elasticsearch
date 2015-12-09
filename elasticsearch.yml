@@ -4,5 +4,3 @@ path:
   work: /data/work
 
 discovery.zen.ping.multicast.enabled: false
-
-index.mapper.dynamic: false
