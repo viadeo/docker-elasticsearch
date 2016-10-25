@@ -8,10 +8,10 @@ RUN apt-get update && \
 # Install ElasticSearch.
 RUN \
   cd /tmp && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz && \
-  tar xvzf elasticsearch-1.1.1.tar.gz && \
-  rm -f elasticsearch-1.1.1.tar.gz && \
-  mv /tmp/elasticsearch-1.1.1 /elasticsearch
+  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.5.tar.gz && \
+  tar xvzf elasticsearch-1.7.5.tar.gz && \
+  rm -f elasticsearch-1.7.5.tar.gz && \
+  mv /tmp/elasticsearch-1.7.5 /elasticsearch
 
 RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head && \
     /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.1.0
