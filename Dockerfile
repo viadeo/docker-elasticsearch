@@ -14,7 +14,7 @@ RUN \
   mv /tmp/elasticsearch-1.7.5 /elasticsearch
 
 RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head && \
-    /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.1.0
+    /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.7.0
 
 # Locale
 ENV LANG en_US.UTF-8  
