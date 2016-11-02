@@ -5,5 +5,3 @@ path:
 
 discovery.zen.ping.multicast.enabled: false
 script.engine.groovy.inline.aggs: on
-script.engine.groovy.inline.search: on
-script.groovy.sandbox.enabled: true
