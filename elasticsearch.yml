@@ -4,4 +4,3 @@ path:
   work: /data/work
 
 discovery.zen.ping.multicast.enabled: false
-script.engine.groovy.inline.aggs: on
