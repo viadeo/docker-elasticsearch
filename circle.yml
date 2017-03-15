@@ -1,0 +1,23 @@
+machine:
+  services:
+    # setup docker
+    - docker
+
+dependencies:
+  cache_directories:
+    - ~/.viadeo # cache viadeo scripts
+  pre:
+    # setup shared scripts
+    - if [[ ! -d ~/.viadeo ]]; then git clone git@github.com:viadeo/viadeo-docker.git ~/.viadeo && git pull; fi   
+
+test:
+  pre:
+    - docker build -t elasticsearch .
+
+deployment:
+  demo:
+    branch: master
+    owner: viadeo
+    commands:
+      # publish docker image using circle environment variables for project name
+      - ~/.viadeo/bin/docker-publish.sh 
