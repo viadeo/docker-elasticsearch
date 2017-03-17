@@ -13,4 +13,4 @@ deployment:
     owner: viadeo
     commands:
       # publish docker image using circle environment variables for project name
-      - ./bin/docker-publish.sh 
+      - bin/docker-publish.sh 
