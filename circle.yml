@@ -3,6 +3,10 @@ machine:
     # setup docker
     - docker
     
+dependencies:
+ cache_directories:
+  - "~/docker"
+  
 test:
   pre:
     - docker build -t elasticsearch:1.7.5 .
