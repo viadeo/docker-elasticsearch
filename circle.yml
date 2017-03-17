@@ -12,7 +12,7 @@ dependencies:
 
 test:
   pre:
-    - docker build -t elasticsearch .
+    - docker build -t elasticsearch:1.7.5 .
 
 deployment:
   demo:
