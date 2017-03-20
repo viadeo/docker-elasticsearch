@@ -13,9 +13,9 @@ eval $(aws ecr get-login --region 'us-west-1')
 
 aws ecr create-repository --repository-name "viadeo/${CIRCLE_PROJECT_REPONAME}" || true
 
-TAG=1.7.5
+TAG=1.7.6
 URL=062010136920.dkr.ecr.us-west-1.amazonaws.com/viadeo/$CIRCLE_PROJECT_REPONAME
 
 echo "pushing docker to $URL"
-docker tag elasticsearch:1.7.5 062010136920.dkr.ecr.us-west-1.amazonaws.com/viadeo/$CIRCLE_PROJECT_REPONAME:$TAG
+docker tag elasticsearch:1.7.6 062010136920.dkr.ecr.us-west-1.amazonaws.com/viadeo/$CIRCLE_PROJECT_REPONAME:$TAG
 docker push $URL
