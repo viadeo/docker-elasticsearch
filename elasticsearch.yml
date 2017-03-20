@@ -4,3 +4,4 @@ path:
   work: /data/work
 
 discovery.zen.ping.multicast.enabled: false
+script.inline: true
